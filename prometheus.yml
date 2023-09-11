@@ -7,3 +7,9 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['172.31.36.153:9090','172.31.34.108:9100','172.31.42.26:9100']
+
+scrape_configs:
+  - job_name: 'node'
+    ec2_sd_configs:
+      - region: us-east-1
+        port: 9100
